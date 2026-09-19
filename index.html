@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Breakout · Arcade Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-shell">
+        <header class="game-header">
+            <div>
+                <p class="eyebrow">MY BREAKOUT · ARCADE EDITION</p>
+                <h1>霓虹打砖块</h1>
+                <p class="subtitle">守住球拍，击穿三关，刷新你的最高分。</p>
+            </div>
+            <span class="stage-badge">3 LEVELS</span>
+        </header>
+
+        <section class="game-card" aria-labelledby="stage-title">
+            <div class="status-bar">
+                <div>
+                    <p class="status-label">当前阶段</p>
+                    <h2 id="stage-title">街机挑战</h2>
+                </div>
+                <p class="status-note">三关 · 三条生命 · 本地最高分</p>
+            </div>
+
+            <div class="canvas-frame">
+                <canvas id="gameCanvas" width="480" height="320">
+                    你的浏览器不支持 HTML Canvas。
+                </canvas>
+            </div>
+
+            <div class="legend" aria-label="当前阶段说明">
+                <span><i class="legend-dot legend-high"></i>30 分</span>
+                <span><i class="legend-dot legend-medium"></i>20 分</span>
+                <span><i class="legend-dot legend-low"></i>10 分</span>
+                <span><i class="legend-dot legend-ball"></i>能量球</span>
+            </div>
+
+            <div class="game-actions" aria-label="游戏操作">
+                <button id="startButton" class="game-button start-button" type="button">
+                    开始游戏
+                </button>
+                <button id="pauseButton" class="game-button pause-button" type="button" hidden>
+                    暂停
+                </button>
+                <button id="restartButton" class="game-button restart-button" type="button" hidden>
+                    重新开始
+                </button>
+            </div>
+        </section>
+
+        <footer class="instructions">
+            <span class="step-number">TIP</span>
+            <p>方向键或 A / D 移动球拍；观察 Canvas 底部的实时状态。</p>
+        </footer>
+    </main>
+
+    <script src="game.js"></script>
+</body>
+</html>
+
